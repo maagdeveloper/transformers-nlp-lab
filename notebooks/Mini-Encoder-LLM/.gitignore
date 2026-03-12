@@ -3,3 +3,4 @@ classifier
 model
 ner
 qa
+embed_model

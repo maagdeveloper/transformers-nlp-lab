@@ -1,0 +1,10 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Collection",
+      "tensorShape": [10000, 192],
+      "tensorPath": "oss_data/embeddings.tsv",
+      "metadataPath": "oss_data/metadata.tsv"
+    }
+  ]
+}
