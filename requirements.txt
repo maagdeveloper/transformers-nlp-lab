@@ -1,0 +1,8 @@
+datasets
+evaluate
+matplotlib
+numpy
+tokenizers
+torch
+transformers
+trl
