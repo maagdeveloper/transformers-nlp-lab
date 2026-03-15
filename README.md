@@ -2,6 +2,10 @@
 
 Notebook-first NLP lab for building small transformer systems end-to-end, including model training, task fine-tuning, routing, and retrieval pipelines.
 
+High-level architecture of the Mini Transformer NLP Lab showing the encoder/decoder pipelines, router, and RAG workflow.
+
+![Architecture](docs/architecture.png)
+
 - train decoder and encoder models from scratch
 - fine-tune for multiple NLP tasks
 - train a TF-IDF query router
@@ -141,6 +145,48 @@ The project demonstrates a modular transformer-based NLP stack:
 - **Mini App** → unified pipeline combining routing, QA, chat, and retrieval
 
 Each component can be studied independently or composed together to build a small but complete NLP system.
+
+## Example Outputs
+
+### Router examples
+
+```text
+Query: What is tokenization?
+Route: direct_qa
+
+Query: Help me understand RAG simply
+Route: chat
+
+Query: Search the documents for information about RAG
+Route: retrieve_generate
+```
+
+### Mini-RAG retrieval example
+```text
+Query: Search the documents for information about RAG
+
+Top retrieved chunk:
+RAG (Retrieval Augmented Generation) is a technique that combines
+information retrieval with text generation. Instead of relying only
+on the model's internal knowledge, RAG retrieves relevant documents
+and uses them as context for generation.
+```
+
+### App-level example
+```text
+Input: What is tokenization?
+Pipeline: direct_qa
+Output: Tokenization is the process of splitting text into smaller units called tokens.
+```
+
+## Minimal Demo
+
+You can also run a simple CLI demo from `notebooks/Z-Mini-App/`:
+
+```bash
+cd notebooks/Z-Mini-App
+python run_app.py
+```
 
 ## Troubleshooting
 
